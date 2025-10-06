@@ -6,61 +6,61 @@
     <title>Товары - Семестровая работа</title> <!-- Заголовок страницы в браузере -->
     <link rel="stylesheet" href="../style/styles.css"> <!-- Подключение внешней таблицы стилей -->
 </head>
-<body> <!-- Тело документа - видимая часть страницы -->
-    <div class="page-container"> <!-- Основной контейнер страницы -->
-        <div class="header">Товары</div> <!-- Блок шапки сайта -->
+<body class="body"> <!-- Тело документа - видимая часть страницы -->
+    <div class="page"> <!-- Основной контейнер страницы -->
+        <div class="page__header">Товары</div> <!-- Блок шапки сайта -->
         <div class="nav"> <!-- Блок навигационного меню -->
-            <ul class="nav-list"> <!-- Неупорядоченный список для меню -->
-                <li class="nav-item"> <!-- Элемент списка меню -->
-                    <a class="nav-link" href="../index.html">Главная</a> <!-- Ссылка на главную страницу -->
+            <ul class="nav__list"> <!-- Неупорядоченный список для меню -->
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="../index.html">Главная</a> <!-- Ссылка на главную страницу -->
                 </li>
-                <li class="nav-item"> <!-- Элемент списка меню -->
-                    <a class="nav-link" href="news.html">Новости</a> <!-- Ссылка на страницу новостей -->
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="news.html">Новости</a> <!-- Ссылка на страницу новостей -->
                 </li>
-                <li class="nav-item"> <!-- Элемент списка меню -->
-                    <a class="nav-link" href="practices.html">Практики</a> <!-- Ссылка на страницу практик -->
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="practices.html">Практики</a> <!-- Ссылка на страницу практик -->
                 </li>
-                <li class="nav-item"> <!-- Элемент списка меню -->
-                    <a class="nav-link active" href="goods.html">Товары</a> <!-- Ссылка на страницу товаров -->
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link nav__link--active" href="goods.html">Товары</a> <!-- Ссылка на страницу товаров -->
                 </li>
-                <li class="nav-item"> <!-- Элемент списка меню -->
-                    <a class="nav-link" href="contacts.html">Контакты</a> <!-- Ссылка на страницу контактов -->
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="contacts.html">Контакты</a> <!-- Ссылка на страницу контактов -->
                 </li>
             </ul>
         </div>
-        <div class="content"> <!-- Основной блок контента -->
-            <h1 class="page-title">Наши товары</h1> <!-- Заголовок страницы -->
+        <div class="page__content"> <!-- Основной блок контента -->
+            <h1 class="page__title">Наши товары</h1> <!-- Заголовок страницы -->
             
-            <div class="products-grid"> <!-- Сетка товаров -->
-                <div class="product-card"> <!-- Карточка товара 1 -->
-                    <img src="../images/goods1.png" alt="Смартфон Xiaomi" class="product-image"> <!-- Изображение товара -->
-                    <div class="product-info"> <!-- Информация о товаре -->
-                        <h3 class="product-name">Смартфон Xiaomi Poco X6 5G</h3> <!-- Название товара -->
-                        <div class="product-price">19 999 ₽</div> <!-- Цена товара -->
-                        <button class="add-to-cart">В корзину</button> <!-- Кнопка добавления в корзину -->
+            <div class="products"> <!-- Сетка товаров -->
+                <div class="products__card"> <!-- Карточка товара 1 -->
+                    <img src="../images/goods1.png" alt="Смартфон Xiaomi" class="products__card-image"> <!-- Изображение товара -->
+                    <div class="products__card-info"> <!-- Информация о товаре -->
+                        <h3 class="products__card-name">Смартфон Xiaomi Poco X6 5G</h3> <!-- Название товара -->
+                        <div class="products__card-price">19 999 ₽</div> <!-- Цена товара -->
+                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
                     </div>
                 </div>
                 
-                <div class="product-card"> <!-- Карточка товара 2 -->
-                    <img src="../images/goods2.png" alt="Ноутбук ASUS" class="product-image"> <!-- Изображение товара -->
-                    <div class="product-info"> <!-- Информация о товаре -->
-                        <h3 class="product-name">Ноутбук ASUS VivoBook 15</h3> <!-- Название товара -->
-                        <div class="product-price">54 999 ₽</div> <!-- Цена товара -->
-                        <button class="add-to-cart">В корзину</button> <!-- Кнопка добавления в корзину -->
+                <div class="products__card"> <!-- Карточка товара 2 -->
+                    <img src="../images/goods2.png" alt="Ноутбук ASUS" class="products__card-image"> <!-- Изображение товара -->
+                    <div class="products__card-info"> <!-- Информация о товаре -->
+                        <h3 class="products__card-name">Ноутбук ASUS VivoBook 15</h3> <!-- Название товара -->
+                        <div class="products__card-price">54 999 ₽</div> <!-- Цена товара -->
+                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
                     </div>
                 </div>
                 
-                <div class="product-card"> <!-- Карточка товара 3 -->
-                    <img src="../images/goods3.jpg" alt="Наушники Sony" class="product-image"> <!-- Изображение товара -->
-                    <div class="product-info"> <!-- Информация о товаре -->
-                        <h3 class="product-name">Наушники Sony WH-1000XM4</h3> <!-- Название товара -->
-                        <div class="product-price">24 999 ₽</div> <!-- Цена товара -->
-                        <button class="add-to-cart">В корзину</button> <!-- Кнопка добавления в корзину -->
+                <div class="products__card"> <!-- Карточка товара 3 -->
+                    <img src="../images/goods3.jpg" alt="Наушники Sony" class="products__card-image"> <!-- Изображение товара -->
+                    <div class="products__card-info"> <!-- Информация о товаре -->
+                        <h3 class="products__card-name">Наушники Sony WH-1000XM4</h3> <!-- Название товара -->
+                        <div class="products__card-price">24 999 ₽</div> <!-- Цена товара -->
+                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer"> <!-- Блок подвала сайта -->
+        <div class="page__footer"> <!-- Блок подвала сайта -->
             <p>&copy; 2024 Интернет-магазин "ТехноМир". Все права защищены.</p> <!-- Текст копирайта -->
             <p>Телефон: +7 (800) 123-45-67 | Email: info@technomir.ru</p> <!-- Контактная информация -->
         </div>
