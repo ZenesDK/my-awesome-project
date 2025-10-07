@@ -1,0 +1,69 @@
+<!DOCTYPE html> <!-- Объявление типа документа HTML5 -->
+<html lang="ru"> <!-- Открывающий тег HTML с указанием языка -->
+<head> <!-- Секция метаданных и подключений -->
+    <meta charset="UTF-8"> <!-- Кодировка документа UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность для мобильных устройств -->
+    <title>Семестровая работа</title> <!-- Заголовок страницы в браузере -->
+    <link rel="stylesheet" href="style/styles.css"> <!-- Подключение внешней таблицы стилей -->
+</head>
+<body class="body"> <!-- Тело документа - видимая часть страницы -->
+    <div class="page"> <!-- Основной контейнер страницы -->
+        <div class="page__header">Хэдер</div> <!-- Блок шапки сайта -->
+        <div class="nav"> <!-- Блок навигационного меню -->
+            <ul class="nav__list"> <!-- Неупорядоченный список для меню -->
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link nav__link--active" href="index.html">Главная</a> <!-- Ссылка на главную страницу -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="pages/news.html">Новости</a> <!-- Ссылка на страницу новостей -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="pages/practices.html">Практики</a> <!-- Ссылка на страницу практик -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="pages/goods.html">Товары</a> <!-- Ссылка на страницу товаров -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a> <!-- Ссылка на страницу контактов -->
+                </li>
+            </ul>
+        </div>
+        <div class="page__content"> <!-- Основной блок контента -->
+            <div class="profile"> <!-- Блок заголовка профиля -->
+                <h1 class="profile__title">Информация об авторе</h1> <!-- Заголовок раздела -->
+                <img class="profile__photo" src="images/photo.png" alt="Фото автора"> <!-- Фотография автора -->
+                <h2 class="profile__name">Кайзер Даниил Дмитриевич</h2> <!-- Имя автора -->
+                <p class="profile__group">ЭФБО-08-24</p> <!-- Группа автора -->
+            </div>
+
+            <div class="about"> <!-- Блок "Обо мне" -->
+                <p>Обо мне: Лосось.</p> <!-- Текст информации об авторе -->
+            </div>
+
+            <div class="skills"> <!-- Контейнер для навыков -->
+                <div class="skills__tag">Навык 1</div> <!-- Элемент навыка 1 -->
+                <div class="skills__tag">Навык 2</div> <!-- Элемент навыка 2 -->
+                <div class="skills__tag">Навык 3</div> <!-- Элемент навыка 3 -->
+                <div class="skills__tag">Навык 4</div> <!-- Элемент навыка 4 -->
+            </div>
+
+            <div class="experience"> <!-- Секция опыта работы -->
+                <h2 class="experience__title">Мой опыт работы</h2> <!-- Заголовок секции опыта -->
+                <div class="experience__card"> <!-- Карточка опыта 1 -->
+                    <h3 class="experience__card-title">Опыт 1</h3> <!-- Заголовок опыта 1 -->
+                    <p class="experience__card-desc">Учился в детском саду.</p> <!-- Описание опыта 1 -->
+                </div>
+                <div class="experience__card"> <!-- Карточка опыта 2 -->
+                    <h3 class="experience__card-title">Опыт 2</h3> <!-- Заголовок опыта 2 -->
+                    <p class="experience__card-desc">Учился в школе.</p> <!-- Описание опыта 2 -->
+                </div>
+                <div class="experience__card"> <!-- Карточка опыта 3 -->
+                    <h3 class="experience__card-title">Опыт 3</h3> <!-- Заголовок опыта 3 -->
+                    <p class="experience__card-desc">Учусь в университете.</p> <!-- Описание опыта 3 -->
+                </div>
+            </div>
+        </div>
+        <div class="page__footer">Футер</div> <!-- Блок подвала сайта -->
+    </div>
+</body>
+</html> <!-- Закрывающий тег HTML -->

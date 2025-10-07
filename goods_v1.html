@@ -1,0 +1,69 @@
+<!DOCTYPE html> <!-- Объявление типа документа HTML5 -->
+<html lang="ru"> <!-- Открывающий тег HTML с указанием языка -->
+<head> <!-- Секция метаданных и подключений -->
+    <meta charset="UTF-8"> <!-- Кодировка документа UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность для мобильных устройств -->
+    <title>Товары - Семестровая работа</title> <!-- Заголовок страницы в браузере -->
+    <link rel="stylesheet" href="../style/styles.css"> <!-- Подключение внешней таблицы стилей -->
+</head>
+<body class="body"> <!-- Тело документа - видимая часть страницы -->
+    <div class="page"> <!-- Основной контейнер страницы -->
+        <div class="page__header">Товары</div> <!-- Блок шапки сайта -->
+        <div class="nav"> <!-- Блок навигационного меню -->
+            <ul class="nav__list"> <!-- Неупорядоченный список для меню -->
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="../index.html">Главная</a> <!-- Ссылка на главную страницу -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="news.html">Новости</a> <!-- Ссылка на страницу новостей -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="practices.html">Практики</a> <!-- Ссылка на страницу практик -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link nav__link--active" href="goods.html">Товары</a> <!-- Ссылка на страницу товаров -->
+                </li>
+                <li class="nav__item"> <!-- Элемент списка меню -->
+                    <a class="nav__link" href="contacts.html">Контакты</a> <!-- Ссылка на страницу контактов -->
+                </li>
+            </ul>
+        </div>
+        <div class="page__content"> <!-- Основной блок контента -->
+            <h1 class="page__title">Наши товары</h1> <!-- Заголовок страницы -->
+            
+            <div class="products"> <!-- Сетка товаров -->
+                <div class="products__card"> <!-- Карточка товара 1 -->
+                    <img src="../images/goods1.png" alt="Смартфон Xiaomi" class="products__card-image"> <!-- Изображение товара -->
+                    <div class="products__card-info"> <!-- Информация о товаре -->
+                        <h3 class="products__card-name">Смартфон Xiaomi Poco X6 5G</h3> <!-- Название товара -->
+                        <div class="products__card-price">19 999 ₽</div> <!-- Цена товара -->
+                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
+                    </div>
+                </div>
+                
+                <div class="products__card"> <!-- Карточка товара 2 -->
+                    <img src="../images/goods2.png" alt="Ноутбук ASUS" class="products__card-image"> <!-- Изображение товара -->
+                    <div class="products__card-info"> <!-- Информация о товаре -->
+                        <h3 class="products__card-name">Ноутбук ASUS VivoBook 15</h3> <!-- Название товара -->
+                        <div class="products__card-price">54 999 ₽</div> <!-- Цена товара -->
+                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
+                    </div>
+                </div>
+                
+                <div class="products__card"> <!-- Карточка товара 3 -->
+                    <img src="../images/goods3.jpg" alt="Наушники Sony" class="products__card-image"> <!-- Изображение товара -->
+                    <div class="products__card-info"> <!-- Информация о товаре -->
+                        <h3 class="products__card-name">Наушники Sony WH-1000XM4</h3> <!-- Название товара -->
+                        <div class="products__card-price">24 999 ₽</div> <!-- Цена товара -->
+                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page__footer"> <!-- Блок подвала сайта -->
+            <p>&copy; 2024 Интернет-магазин "ТехноМир". Все права защищены.</p> <!-- Текст копирайта -->
+            <p>Телефон: +7 (800) 123-45-67 | Email: info@technomir.ru</p> <!-- Контактная информация -->
+        </div>
+    </div>
+</body>
+</html> <!-- Закрывающий тег HTML -->

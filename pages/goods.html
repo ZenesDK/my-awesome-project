@@ -1,69 +1,191 @@
-<!DOCTYPE html> <!-- Объявление типа документа HTML5 -->
-<html lang="ru"> <!-- Открывающий тег HTML с указанием языка -->
-<head> <!-- Секция метаданных и подключений -->
-    <meta charset="UTF-8"> <!-- Кодировка документа UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность для мобильных устройств -->
-    <title>Товары - Семестровая работа</title> <!-- Заголовок страницы в браузере -->
-    <link rel="stylesheet" href="../style/styles.css"> <!-- Подключение внешней таблицы стилей -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Семестровая работа</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение иконок Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6A0DAD 0%, #8A2BE2 100%);
+        }
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);
+            border: none;
+            color: white;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #00BFFF 0%, #8A2BE2 100%);
+            color: white;
+        }
+    </style>
 </head>
-<body class="body"> <!-- Тело документа - видимая часть страницы -->
-    <div class="page"> <!-- Основной контейнер страницы -->
-        <div class="page__header">Товары</div> <!-- Блок шапки сайта -->
-        <div class="nav"> <!-- Блок навигационного меню -->
-            <ul class="nav__list"> <!-- Неупорядоченный список для меню -->
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="../index.html">Главная</a> <!-- Ссылка на главную страницу -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="news.html">Новости</a> <!-- Ссылка на страницу новостей -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="practices.html">Практики</a> <!-- Ссылка на страницу практик -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link nav__link--active" href="goods.html">Товары</a> <!-- Ссылка на страницу товаров -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="contacts.html">Контакты</a> <!-- Ссылка на страницу контактов -->
-                </li>
-            </ul>
-        </div>
-        <div class="page__content"> <!-- Основной блок контента -->
-            <h1 class="page__title">Наши товары</h1> <!-- Заголовок страницы -->
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-bg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="bi bi-cart me-2"></i>ТехноМир
+            </a>
             
-            <div class="products"> <!-- Сетка товаров -->
-                <div class="products__card"> <!-- Карточка товара 1 -->
-                    <img src="../images/goods1.png" alt="Смартфон Xiaomi" class="products__card-image"> <!-- Изображение товара -->
-                    <div class="products__card-info"> <!-- Информация о товаре -->
-                        <h3 class="products__card-name">Смартфон Xiaomi Poco X6 5G</h3> <!-- Название товара -->
-                        <div class="products__card-price">19 999 ₽</div> <!-- Цена товара -->
-                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">
+                            <i class="bi bi-newspaper me-1"></i>Новости
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practices.html">
+                            <i class="bi bi-code-slash me-1"></i>Практики
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="goods.html">
+                            <i class="bi bi-cart me-1"></i>Товары
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-telephone me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container my-5">
+        <!-- Заголовок страницы -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="display-4 text-primary mb-3">Наши товары</h1>
+                <p class="lead text-muted">Лучшие технологические продукты по доступным ценам</p>
+            </div>
+        </div>
+
+        <!-- Сетка товаров -->
+        <div class="row g-4">
+            <!-- Товар 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card product-card h-100 shadow">
+                    <img src="../images/goods1.png" class="card-img-top" alt="Смартфон Xiaomi" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">Смартфон Xiaomi Poco X6 5G</h5>
+                        <p class="card-text flex-grow-1">
+                            Современный смартфон с поддержкой 5G, мощным процессором и качественной камерой.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="h4 text-success mb-0">19 999 ₽</span>
+                                <span class="badge bg-warning text-dark">
+                                    <i class="bi bi-star-fill me-1"></i>Хит продаж
+                                </span>
+                            </div>
+                            <button class="btn btn-gradient w-100 btn-lg">
+                                <i class="bi bi-cart-plus me-2"></i>В корзину
+                            </button>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="products__card"> <!-- Карточка товара 2 -->
-                    <img src="../images/goods2.png" alt="Ноутбук ASUS" class="products__card-image"> <!-- Изображение товара -->
-                    <div class="products__card-info"> <!-- Информация о товаре -->
-                        <h3 class="products__card-name">Ноутбук ASUS VivoBook 15</h3> <!-- Название товара -->
-                        <div class="products__card-price">54 999 ₽</div> <!-- Цена товара -->
-                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
+            </div>
+
+            <!-- Товар 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card product-card h-100 shadow">
+                    <img src="../images/goods2.png" class="card-img-top" alt="Ноутбук ASUS" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">Ноутбук ASUS VivoBook 15</h5>
+                        <p class="card-text flex-grow-1">
+                            Стильный и производительный ноутбук для работы и развлечений с современными характеристиками.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="h4 text-success mb-0">54 999 ₽</span>
+                                <span class="badge bg-info text-white">
+                                    <i class="bi bi-lightning-fill me-1"></i>Новинка
+                                </span>
+                            </div>
+                            <button class="btn btn-gradient w-100 btn-lg">
+                                <i class="bi bi-cart-plus me-2"></i>В корзину
+                            </button>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="products__card"> <!-- Карточка товара 3 -->
-                    <img src="../images/goods3.jpg" alt="Наушники Sony" class="products__card-image"> <!-- Изображение товара -->
-                    <div class="products__card-info"> <!-- Информация о товаре -->
-                        <h3 class="products__card-name">Наушники Sony WH-1000XM4</h3> <!-- Название товара -->
-                        <div class="products__card-price">24 999 ₽</div> <!-- Цена товара -->
-                        <button class="products__card-button">В корзину</button> <!-- Кнопка добавления в корзину -->
+            </div>
+
+            <!-- Товар 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card product-card h-100 shadow">
+                    <img src="../images/goods3.jpg" class="card-img-top" alt="Наушники Sony" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">Наушники Sony WH-1000XM4</h5>
+                        <p class="card-text flex-grow-1">
+                            Беспроводные наушники с шумоподавлением и премиальным звуком для истинных ценителей музыки.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="h4 text-success mb-0">24 999 ₽</span>
+                                <span class="badge bg-danger text-white">
+                                    <i class="bi bi-tag-fill me-1"></i>Скидка
+                                </span>
+                            </div>
+                            <button class="btn btn-gradient w-100 btn-lg">
+                                <i class="bi bi-cart-plus me-2"></i>В корзину
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page__footer"> <!-- Блок подвала сайта -->
-            <p>&copy; 2024 Интернет-магазин "ТехноМир". Все права защищены.</p> <!-- Текст копирайта -->
-            <p>Телефон: +7 (800) 123-45-67 | Email: info@technomir.ru</p> <!-- Контактная информация -->
+
+        <!-- Дополнительная информация -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading">
+                        <i class="bi bi-info-circle me-2"></i>Информация о доставке
+                    </h4>
+                    <p class="mb-0">
+                        Бесплатная доставка при заказе от 30 000 ₽. Гарантия на все товары - 12 месяцев.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Футер -->
+    <footer class="gradient-bg text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-1">&copy; 2025 Интернет-магазин "ТехноМир". Все права защищены.</p>
+                    <p class="mb-0">Телефон: +7 (800) 123-45-67 | Email: info@technomir.ru</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> <!-- Закрывающий тег HTML -->
+</html>
