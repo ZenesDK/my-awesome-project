@@ -4,46 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семестровая работа</title>
-    <!-- Подключение Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Подключение иконок Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        /* Кастомные стили для дополнительного оформления */
-        .gradient-bg {
-            background: linear-gradient(135deg, #6A0DAD 0%, #8A2BE2 100%);
-        }
-        .profile-img {
-            width: 220px;
-            height: 280px;
-            object-fit: cover;
-            border: 4px solid #8A2BE2;
-        }
-        .skill-badge {
-            background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);
-            color: white;
-        }
-        .about-section {
-            background: linear-gradient(135deg, #F0F8FF 0%, #E6E6FA 100%);
-            border-left: 5px solid #00BFFF;
-        }
-    </style>
+    <link rel="stylesheet" href="style/styles.css">
 </head>
-<body>
-    <!-- Навигационная панель - Bootstrap компонент -->
+<body class="body">
+    <!-- Навигационная панель -->
     <nav class="navbar navbar-expand-lg navbar-dark gradient-bg">
         <div class="container">
-            <!-- Бренд/логотип -->
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-person-circle me-2"></i>Портфолио
             </a>
             
-            <!-- Кнопка для мобильных устройств -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <!-- Навигационные ссылки -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -89,11 +65,9 @@
         <!-- Профиль автора -->
         <div class="row align-items-center mb-5">
             <div class="col-md-4 text-center">
-                <!-- Фото профиля -->
                 <img src="images/photo.png" alt="Фото автора" class="profile-img rounded shadow">
             </div>
             <div class="col-md-8">
-                <!-- Информация об авторе -->
                 <h2 class="text-primary mb-3">Кайзер Даниил Дмитриевич</h2>
                 <p class="fs-5 text-secondary mb-2">
                     <i class="bi bi-mortarboard-fill text-primary me-2"></i>ЭФБО-08-24
@@ -107,7 +81,7 @@
                     <h4 class="text-primary mb-3">
                         <i class="bi bi-person-badge me-2"></i>Обо мне
                     </h4>
-                    <p class="mb-0">Лосось.</p>
+                    <p class="mb-0">Лосось. Студент, увлекающийся веб-разработкой и современными технологиями. Стремлюсь к постоянному развитию и изучению новых инструментов.</p>
                 </div>
             </div>
         </div>
@@ -119,11 +93,12 @@
                     <i class="bi bi-tools me-2"></i>Мои навыки
                 </h3>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <!-- Навыки в виде бейджей Bootstrap -->
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Навык 1</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Навык 2</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Навык 3</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Навык 4</span>
+                    <span class="skill-badge badge rounded-pill p-3 fs-6">HTML5 & CSS3</span>
+                    <span class="skill-badge badge rounded-pill p-3 fs-6">JavaScript</span>
+                    <span class="skill-badge badge rounded-pill p-3 fs-6">Bootstrap</span>
+                    <span class="skill-badge badge rounded-pill p-3 fs-6">Адаптивная вёрстка</span>
+                    <span class="skill-badge badge rounded-pill p-3 fs-6">Git</span>
+                    <span class="skill-badge badge rounded-pill p-3 fs-6">Figma</span>
                 </div>
             </div>
         </div>
@@ -135,16 +110,15 @@
                     <i class="bi bi-briefcase me-2"></i>Мой опыт работы
                 </h3>
                 
-                <!-- Карточки опыта -->
                 <div class="row g-4">
                     <!-- Опыт 1 -->
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-primary">
+                        <div class="card h-100 shadow-sm border-primary practice-card">
                             <div class="card-body">
                                 <h5 class="card-title text-primary">
                                     <i class="bi bi-building me-2"></i>Опыт 1
                                 </h5>
-                                <p class="card-text">Учился в детском саду.</p>
+                                <p class="card-text">Учился в детском саду. Получил базовые навыки социального взаимодействия и начального развития.</p>
                             </div>
                             <div class="card-footer bg-transparent">
                                 <small class="text-muted">Начальный этап</small>
@@ -154,12 +128,12 @@
                     
                     <!-- Опыт 2 -->
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-success">
+                        <div class="card h-100 shadow-sm border-success practice-card">
                             <div class="card-body">
                                 <h5 class="card-title text-success">
                                     <i class="bi bi-book me-2"></i>Опыт 2
                                 </h5>
-                                <p class="card-text">Учился в школе.</p>
+                                <p class="card-text">Учился в школе. Освоил фундаментальные знания и начал интересоваться технологиями.</p>
                             </div>
                             <div class="card-footer bg-transparent">
                                 <small class="text-muted">Базовое образование</small>
@@ -169,12 +143,12 @@
                     
                     <!-- Опыт 3 -->
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-warning">
+                        <div class="card h-100 shadow-sm border-warning practice-card">
                             <div class="card-body">
                                 <h5 class="card-title text-warning">
                                     <i class="bi bi-mortarboard me-2"></i>Опыт 3
                                 </h5>
-                                <p class="card-text">Учусь в университете.</p>
+                                <p class="card-text">Учусь в университете. Углубляю знания в области программирования и веб-разработки.</p>
                             </div>
                             <div class="card-footer bg-transparent">
                                 <small class="text-muted">Высшее образование</small>
@@ -197,7 +171,6 @@
         </div>
     </footer>
 
-    <!-- Подключение Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

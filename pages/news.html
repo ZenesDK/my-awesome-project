@@ -1,70 +1,173 @@
-<!DOCTYPE html> <!-- Объявление типа документа HTML5 -->
-<html lang="ru"> <!-- Открывающий тег HTML с указанием языка -->
-<head> <!-- Секция метаданных и подключений -->
-    <meta charset="UTF-8"> <!-- Кодировка документа UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность для мобильных устройств -->
-    <title>Новости - Семестровая работа</title> <!-- Заголовок страницы в браузере -->
-    <link rel="stylesheet" href="../style/styles.css"> <!-- Подключение внешней таблицы стилей -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Семестровая работа</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body class="body"> <!-- Тело документа - видимая часть страницы -->
-    <div class="page"> <!-- Основной контейнер страницы -->
-        <div class="page__header">Новости</div> <!-- Блок шапки сайта -->
-        <div class="nav"> <!-- Блок навигационного меню -->
-            <ul class="nav__list"> <!-- Неупорядоченный список для меню -->
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="../index.html">Главная</a> <!-- Ссылка на главную страницу -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link nav__link--active" href="news.html">Новости</a> <!-- Ссылка на страницу новостей -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="practices.html">Практики</a> <!-- Ссылка на страницу практик -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="goods.html">Товары</a> <!-- Ссылка на страницу товаров -->
-                </li>
-                <li class="nav__item"> <!-- Элемент списка меню -->
-                    <a class="nav__link" href="contacts.html">Контакты</a> <!-- Ссылка на страницу контактов -->
-                </li>
-            </ul>
-        </div>
-        <div class="page__content"> <!-- Основной блок контента -->
-            <h1 class="page__title">Последние новости</h1> <!-- Заголовок страницы -->
+<body class="body">
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-bg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="bi bi-newspaper me-2"></i>Новости
+            </a>
             
-            <div class="news"> <!-- Контейнер для новостей -->
-                <div class="news__card"> <!-- Карточка новости 1 -->
-                    <h2 class="news__card-title">Обновлены контакты</h2> <!-- Заголовок новости -->
-                    <div class="news__card-meta"> <!-- Мета-информация новости -->
-                        Опубликовано: 29 сентября 2025 | Автор: Кайзер Д.Д. <!-- Дата и автор -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">
+                            <i class="bi bi-newspaper me-1"></i>Новости
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practices.html">
+                            <i class="bi bi-code-slash me-1"></i>Практики
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="goods.html">
+                            <i class="bi bi-cart me-1"></i>Товары
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-telephone me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container my-5">
+        <!-- Заголовок страницы -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="display-4 text-primary mb-3">Последние новости</h1>
+                <p class="lead text-muted">Следите за обновлениями и событиями</p>
+            </div>
+        </div>
+
+        <!-- Сетка новостей -->
+        <div class="row g-4">
+            <!-- Новость 1 -->
+            <div class="col-lg-6">
+                <div class="card news-card h-100 shadow-sm border-primary">
+                    <div class="card-header bg-transparent border-primary">
+                        <h5 class="card-title text-primary mb-0">
+                            <i class="bi bi-megaphone me-2"></i>Обновлены контакты
+                        </h5>
                     </div>
-                    <div class="news__card-text"> <!-- Текст новости -->
-                        <p>Мы рады сообщить об обновлении контактов, будем рады обратной связи в случае каких-либо проблем.</p> <!-- Абзац текста -->
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-primary">Обновление</span>
+                            <small class="text-muted">29 сентября 2025</small>
+                        </div>
+                        <p class="card-text">Мы рады сообщить об обновлении контактов, будем рады обратной связи в случае каких-либо проблем. Добавлены новые способы связи и обновлена контактная информация.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">
+                            <i class="bi bi-person me-1"></i>Автор: Кайзер Д.Д.
+                        </small>
                     </div>
                 </div>
-                
-                <div class="news__card"> <!-- Карточка новости 2 -->
-                    <h2 class="news__card-title">Обновление изображений</h2> <!-- Заголовок новости -->
-                    <div class="news__card-meta"> <!-- Мета-информация новости -->
-                        Опубликовано: 28 сентября 2025 | Автор: Кайзер Д.Д. <!-- Дата и автор -->
+            </div>
+
+            <!-- Новость 2 -->
+            <div class="col-lg-6">
+                <div class="card news-card h-100 shadow-sm border-success">
+                    <div class="card-header bg-transparent border-success">
+                        <h5 class="card-title text-success mb-0">
+                            <i class="bi bi-image me-2"></i>Обновление изображений
+                        </h5>
                     </div>
-                    <div class="news__card-text"> <!-- Текст новости -->
-                        <p>Добавлены изображения на сайт.</p> <!-- Абзац текста -->
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-success">Дизайн</span>
+                            <small class="text-muted">28 сентября 2025</small>
+                        </div>
+                        <p class="card-text">Добавлены новые изображения на сайт. Теперь все страницы содержат качественные визуальные элементы, улучшающие пользовательский опыт.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">
+                            <i class="bi bi-person me-1"></i>Автор: Кайзер Д.Д.
+                        </small>
                     </div>
                 </div>
-                
-                <div class="news__card"> <!-- Карточка новости 3 -->
-                    <h2 class="news__card-title">Новый интернет ресурс</h2> <!-- Заголовок новости -->
-                    <div class="news__card-meta"> <!-- Мета-информация новости -->
-                        Опубликовано: 27 сентября 2025| Автор: Кайзер Д.Д. <!-- Дата и автор -->
+            </div>
+
+            <!-- Новость 3 -->
+            <div class="col-12">
+                <div class="card news-card shadow-sm border-warning">
+                    <div class="card-header bg-transparent border-warning">
+                        <h5 class="card-title text-warning mb-0">
+                            <i class="bi bi-globe me-2"></i>Новый интернет ресурс
+                        </h5>
                     </div>
-                    <div class="news__card-text"> <!-- Текст новости -->
-                        <p>Автор сайта закончил базовый макет сайта.</p> <!-- Абзац текста -->
-                        <p>В будующем сайт будет лучше и лучше.</p> <!-- Абзац текста -->
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-warning text-dark">Важно</span>
+                            <small class="text-muted">27 сентября 2025</small>
+                        </div>
+                        <p class="card-text">Автор сайта закончил базовый макет сайта. В будующем сайт будет лучше и лучше. Планируется добавление новых функций и улучшение существующего функционала.</p>
+                        <div class="mt-3 p-3 bg-light rounded">
+                            <h6 class="text-primary">Планы на будущее:</h6>
+                            <ul class="mb-0">
+                                <li>Добавление системы комментариев</li>
+                                <li>Интеграция с социальными сетями</li>
+                                <li>Мобильное приложение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">
+                            <i class="bi bi-person me-1"></i>Автор: Кайзер Д.Д.
+                        </small>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page__footer">Футер</div> <!-- Блок подвала сайта -->
+
+        <!-- Дополнительная информация -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading">
+                        <i class="bi bi-bell me-2"></i>Подпишитесь на обновления
+                    </h4>
+                    <p class="mb-0">
+                        Будьте в курсе всех новостей и обновлений. Следите за нашими социальными сетями или подпишитесь на email-рассылку.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Футер -->
+    <footer class="gradient-bg text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Новостной портал. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> <!-- Закрывающий тег HTML -->
+</html>
