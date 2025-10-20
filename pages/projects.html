@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Семестровая работа</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body class="body">
+    <!-- Шапка -->
+    <header class="gradient-bg text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <i class="bi bi-folder display-4 mb-3"></i>
+                    <h1 class="h2 mb-0">Кайзер Даниил Дмитриевич</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #6A0DAD;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">Проекты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diary.html">Дневник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container my-5">
+        <!-- Заголовок и фильтры -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6">
+                <h2 class="text-primary mb-0">Мои проекты</h2>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap justify-content-md-end gap-2">
+                    <button class="btn btn-outline-primary btn-sm active">Все</button>
+                    <button class="btn btn-outline-primary btn-sm">HTML</button>
+                    <button class="btn btn-outline-primary btn-sm">JS</button>
+                    <button class="btn btn-outline-primary btn-sm">React</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Сетка проектов -->
+        <div class="row g-4">
+            <!-- Проект 1 -->
+            <div class="col-md-6">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-globe text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3 text-primary">Личный сайт</h5>
+                        <p class="card-text">Персональный сайт-визитка с информацией о себе и навыках</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-1">HTML</span>
+                            <span class="badge bg-primary me-1">CSS</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3">Посмотреть проект</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 2 -->
+            <div class="col-md-6">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-check-square text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3 text-primary">Todo-приложение</h5>
+                        <p class="card-text">Приложение для управления задачами с возможностью добавления и удаления</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-1">JavaScript</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3">Посмотреть проект</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 3 -->
+            <div class="col-md-6">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-cart text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3 text-primary">Интернет-магазин</h5>
+                        <p class="card-text">Полнофункциональный магазин с корзиной и оформлением заказов</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-1">React</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3">Посмотреть проект</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект 4 -->
+            <div class="col-md-6">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-person-badge text-primary" style="font-size: 3rem;"></i>
+                        <h5 class="card-title mt-3 text-primary">Портфолио</h5>
+                        <p class="card-text">Современное портфолио с адаптивным дизайном и анимациями</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-1">Bootstrap</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3">Посмотреть проект</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="gradient-bg text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Контакты</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
