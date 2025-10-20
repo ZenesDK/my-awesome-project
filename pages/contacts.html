@@ -7,66 +7,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style/styles.css">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        .container.my-5 {
-            flex: 1 0 auto;
-        }
-        
-        footer {
-            flex-shrink: 0;
-        }
-    </style>
 </head>
 <body class="body">
-    <!-- Навигационная панель -->
-    <nav class="navbar navbar-expand-lg navbar-dark gradient-bg">
+    <!-- Шапка -->
+    <header class="gradient-bg text-white py-4">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="../index.html">
-                <i class="bi bi-telephone me-2"></i>Контакты
-            </a>
-            
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <i class="bi bi-person-circle display-4 mb-3"></i>
+                    <h1 class="h2 mb-0">Кайзер Даниил Дмитриевич</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #6A0DAD;">
+        <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <i class="bi bi-house me-1"></i>Главная
-                        </a>
+                        <a class="nav-link" href="../index.html">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="news.html">
-                            <i class="bi bi-newspaper me-1"></i>Новости
-                        </a>
+                        <a class="nav-link" href="projects.html">Проекты</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="practices.html">
-                            <i class="bi bi-code-slash me-1"></i>Практики
-                        </a>
+                        <a class="nav-link" href="diary.html">Дневник</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="goods.html">
-                            <i class="bi bi-cart me-1"></i>Товары
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contacts.html">
-                            <i class="bi bi-telephone me-1"></i>Контакты
-                        </a>
+                        <a class="nav-link active" href="contacts.html">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -74,309 +47,79 @@
     </nav>
 
     <!-- Основной контент -->
-    <div class="container my-5">
-        <!-- Заголовок страницы -->
+    <main class="container my-5">
+        <!-- Заголовок -->
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h1 class="display-4 text-primary mb-3">Свяжитесь с нами</h1>
-                <p class="lead text-muted">Мы всегда рады вашим вопросам и предложениям</p>
+                <h2 class="text-primary">Свяжитесь со мной</h2>
             </div>
         </div>
 
-        <!-- Контактные карточки -->
-        <div class="row g-4 mb-5">
-            <!-- Контакт 1 -->
-            <div class="col-md-4">
-                <div class="card contact-card h-100 shadow-sm border-primary">
-                    <div class="card-body text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-envelope-fill text-primary" style="font-size: 3rem;"></i>
-                        </div>
-                        <h5 class="card-title text-primary">Электронная почта</h5>
-                        <div class="card-text">
-                            <p class="mb-2">
-                                <i class="bi bi-envelope me-2 text-primary"></i>
-                                <strong>Основной:</strong><br>
-                                daniilkajzer5@gmail.com
-                            </p>
-                            <p class="mb-0">
-                                <i class="bi bi-envelope me-2 text-primary"></i>
-                                <strong>Запасной:</strong><br>
-                                daniilkajzer@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-transparent text-center">
-                        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#emailModal">
-                            <i class="bi bi-envelope me-1"></i>Написать письмо
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Контакт 2 -->
-            <div class="col-md-4">
-                <div class="card contact-card h-100 shadow-sm border-success">
-                    <div class="card-body text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-geo-alt-fill text-success" style="font-size: 3rem;"></i>
-                        </div>
-                        <h5 class="card-title text-success">Адрес</h5>
-                        <div class="card-text">
-                            <p class="mb-0">
-                                <i class="bi bi-building me-2 text-success"></i>
-                                г. Москва, ул. Пушкина, д. Колотушкина
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-transparent text-center">
-                        <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#mapModal">
-                            <i class="bi bi-map me-1"></i>Открыть карту
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Контакт 3 -->
-            <div class="col-md-4">
-                <div class="card contact-card h-100 shadow-sm border-warning">
-                    <div class="card-body text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-telephone-fill text-warning" style="font-size: 3rem;"></i>
-                        </div>
-                        <h5 class="card-title text-warning">Телефон</h5>
-                        <div class="card-text">
-                            <p class="mb-2">
-                                <i class="bi bi-phone me-2 text-warning"></i>
-                                +7 (926) 211-07-25
-                            </p>
-                            <p class="mb-0">
-                                <i class="bi bi-clock me-2 text-warning"></i>
-                                Пн-Пт: 9:00-18:00
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-transparent text-center">
-                        <button class="btn btn-gradient w-100" data-bs-toggle="modal" data-bs-target="#callModal">
-                            <i class="bi bi-telephone me-1"></i>Позвонить сейчас
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Форма обратной связи -->
-        <div class="row">
-            <div class="col-12">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h4 class="card-title mb-0">
-                            <i class="bi bi-chat-dots me-2"></i>Форма обратной связи
-                        </h4>
-                    </div>
-                    <div class="card-body">
-                        <form id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="name" class="form-label">Ваше имя</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">Email адрес</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Введите ваш email" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="subject" class="form-label">Тема сообщения</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Введите тему сообщения" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Сообщение</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Введите ваше сообщение" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="button" class="btn btn-gradient btn-lg w-100" data-bs-toggle="modal" data-bs-target="#submitModal">
-                                        <i class="bi bi-send me-2"></i>Отправить сообщение
-                                    </button>
-                                </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Форма обратной связи -->
+                <div class="card border-0 shadow-sm mb-5">
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Имя:</label>
+                                <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Введите ваш email">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Сообщение:</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Введите ваше сообщение"></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-gradient btn-lg">
+                                    Отправить сообщение
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
+
+                <!-- Контактная информация -->
+                <div class="text-center">
+                    <h4 class="text-primary mb-4">Контакты:</h4>
+                    
+                    <div class="contact-info">
+                        <p class="mb-3">
+                            <i class="bi bi-envelope-fill text-primary me-2"></i>
+                            daniilkajzer5@gmail.com
+                        </p>
+                        
+                        <p class="mb-3">
+                            <i class="bi bi-github text-primary me-2"></i>
+                            GitHub: ZenesDK
+                        </p>
+                        
+                        <p class="mb-0">
+                            <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                            Москва, Россия
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Футер -->
     <footer class="gradient-bg text-white py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 Контактная информация. Все права защищены.</p>
+                    <p class="mb-0">&copy; 2025 Контакты</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Модальное окно email -->
-    <div class="modal fade" id="emailModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Написать письмо</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="alert alert-info">
-                        <i class="bi bi-info-circle me-2"></i>
-                        Вы можете написать нам на электронную почту
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card border-primary mb-3">
-                                <div class="card-header bg-primary text-white">
-                                    <i class="bi bi-envelope me-2"></i>Основной email
-                                </div>
-                                <div class="card-body">
-                                    <h6>daniilkajzer5@gmail.com</h6>
-                                    <p class="text-muted small">Для общих вопросов и сотрудничества</p>
-                                    <a class="btn btn-outline-primary btn-sm">
-                                        Написать
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card border-secondary mb-3">
-                                <div class="card-header bg-secondary text-white">
-                                    <i class="bi bi-envelope me-2"></i>Запасной email
-                                </div>
-                                <div class="card-body">
-                                    <h6>daniilkajzer@gmail.com</h6>
-                                    <p class="text-muted small">Для срочных вопросов</p>
-                                    <a class="btn btn-outline-secondary btn-sm">
-                                        Написать
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Модальное окно карты -->
-    <div class="modal fade" id="mapModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Наш адрес на карте</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="alert alert-success">
-                        <i class="bi bi-geo-alt me-2"></i>
-                        г. Москва, ул. Пушкина, д. Колотушкина
-                    </div>
-                    
-                    <!-- Заглушка для карты -->
-                    <div class="bg-light rounded p-5 text-center border">
-                        <i class="bi bi-map" style="font-size: 3rem; color: #6c757d;"></i>
-                        <h5 class="mt-3 text-muted">Карта расположения</h5>
-                        <p class="text-muted">Здесь будет отображаться интерактивная карта</p>
-                        <div class="mt-3">
-                            <button class="btn btn-outline-success me-2">
-                                <i class="bi bi-geo-alt me-1"></i>Открыть в Google Maps
-                            </button>
-                            <button class="btn btn-outline-primary">
-                                <i class="bi bi-download me-1"></i>Скачать схему проезда
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-4">
-                        <h6>Как добраться:</h6>
-                        <ul>
-                            <li>Метро: ст. "Пушкинская" (5 минут пешком)</li>
-                            <li>Автобусы: № 101, 204, 320</li>
-                            <li>Остановка: "Улица Пушкина"</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Модальное окно звонка -->
-    <div class="modal fade" id="callModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Позвонить нам</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="mb-4">
-                        <i class="bi bi-telephone-fill text-warning" style="font-size: 4rem;"></i>
-                    </div>
-                    <h4>+7 (926) 211-07-25</h4>
-                    <p class="text-muted">Кайзер Даниил Дмитриевич</p>
-                    
-                    <div class="alert alert-warning">
-                        <i class="bi bi-clock me-2"></i>
-                        <strong>Время работы:</strong><br>
-                        Понедельник - Пятница: 9:00 - 18:00
-                    </div>
-                    
-                    <div class="d-grid gap-2">
-                        <a href="tel:+79262110725" class="btn btn-gradient btn-lg">
-                            <i class="bi bi-telephone me-2"></i>Позвонить сейчас
-                        </a>
-                        <button class="btn btn-outline-secondary">
-                            <i class="bi bi-clipboard me-2"></i>Скопировать номер
-                        </button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Модальное окно подтверждения отправки -->
-    <div class="modal fade" id="submitModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Подтверждение отправки</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="mb-4">
-                        <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
-                    </div>
-                    <h4>Сообщение отправлено!</h4>
-                    <p class="text-muted">Мы получили ваше сообщение и свяжемся с вами в ближайшее время.</p>
-                    
-                    <div class="alert alert-info">
-                        <i class="bi bi-info-circle me-2"></i>
-                        Обычно мы отвечаем в течение 24 часов
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Отлично!</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

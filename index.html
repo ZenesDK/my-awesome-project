@@ -3,49 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Портфолио - Семестровая работа</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style/styles.css">
 </head>
 <body class="body">
-    <!-- Навигационная панель -->
-    <nav class="navbar navbar-expand-lg navbar-dark gradient-bg">
+    <!-- Шапка -->
+    <header class="gradient-bg text-white py-4">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-person-circle me-2"></i>Портфолио
-            </a>
-            
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <i class="bi bi-person-circle display-4 mb-3"></i>
+                    <h1 class="h2 mb-0">Кайзер Даниил Дмитриевич</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #6A0DAD;">
+        <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            <i class="bi bi-house me-1"></i>Главная
-                        </a>
+                        <a class="nav-link active" href="index.html">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/news.html">
-                            <i class="bi bi-newspaper me-1"></i>Новости
-                        </a>
+                        <a class="nav-link" href="pages/practices.html">Проекты</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/practices.html">
-                            <i class="bi bi-code-slash me-1"></i>Практики
-                        </a>
+                        <a class="nav-link" href="pages/news.html">Дневник</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/goods.html">
-                            <i class="bi bi-cart me-1"></i>Товары
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contacts.html">
-                            <i class="bi bi-telephone me-1"></i>Контакты
-                        </a>
+                        <a class="nav-link" href="pages/contacts.html">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -53,119 +47,123 @@
     </nav>
 
     <!-- Основной контент -->
-    <div class="container my-5">
-        <!-- Заголовок страницы -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-4 text-primary mb-3">Информация об авторе</h1>
-                <p class="lead text-muted">Добро пожаловать на мою персональную страницу</p>
-            </div>
-        </div>
-
-        <!-- Профиль автора -->
-        <div class="row align-items-center mb-5">
-            <div class="col-md-4 text-center">
-                <img src="images/photo.png" alt="Фото автора" class="profile-img rounded shadow">
+    <main class="container my-5">
+        <!-- Приветствие -->
+        <section class="row align-items-center mb-5">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="images/photo.png" alt="Фото студента" class="profile-img rounded">
             </div>
             <div class="col-md-8">
-                <h2 class="text-primary mb-3">Кайзер Даниил Дмитриевич</h2>
+                <h2 class="text-primary mb-3">Привет! Я студент</h2>
                 <p class="fs-5 text-secondary mb-2">
-                    <i class="bi bi-mortarboard-fill text-primary me-2"></i>ЭФБО-08-24
+                    <strong>Факультет:</strong> Экономический<br>
+                    <strong>Группа:</strong> ЭФБО-08-24<br>
+                    <strong>Специализация:</strong> Веб-разработка
                 </p>
-                <p class="fs-5 text-secondary">
-                    <i class="bi bi-geo-alt-fill text-primary me-2"></i>Студент университета
-                </p>
+                <p class="mb-4">Увлекаюсь веб-разработкой, изучаю современные технологии и создаю интересные проекты.</p>
                 
-                <!-- Блок "Обо мне" -->
-                <div class="about-section p-4 rounded mt-4">
-                    <h4 class="text-primary mb-3">
-                        <i class="bi bi-person-badge me-2"></i>Обо мне
-                    </h4>
-                    <p class="mb-0">Лосось. Студент, увлекающийся веб-разработкой и современными технологиями. Стремлюсь к постоянному развитию и изучению новых инструментов.</p>
-                </div>
+                <!-- Кнопка скачивания резюме -->
+                <a href="assets/resume.pdf" class="btn btn-gradient btn-lg" download="Резюме_Кайзер_Даниил.pdf">
+                    <i class="bi bi-download me-2"></i>Скачать резюме
+                </a>
             </div>
-        </div>
+        </section>
 
         <!-- Навыки -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <h3 class="text-center text-primary mb-4">
-                    <i class="bi bi-tools me-2"></i>Мои навыки
-                </h3>
-                <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">HTML5 & CSS3</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">JavaScript</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Bootstrap</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Адаптивная вёрстка</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Git</span>
-                    <span class="skill-badge badge rounded-pill p-3 fs-6">Figma</span>
+        <section class="mb-5">
+            <h2 class="text-center text-primary mb-4">Мои навыки</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar" style="width: 90%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar" style="width: 80%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Bootstrap</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar" style="width: 85%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>React</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar" style="width: 60%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Опыт работы -->
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center text-primary mb-4">
-                    <i class="bi bi-briefcase me-2"></i>Мой опыт работы
-                </h3>
-                
-                <div class="row g-4">
-                    <!-- Опыт 1 -->
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-primary practice-card">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">
-                                    <i class="bi bi-building me-2"></i>Опыт 1
-                                </h5>
-                                <p class="card-text">Учился в детском саду. Получил базовые навыки социального взаимодействия и начального развития.</p>
-                            </div>
-                            <div class="card-footer bg-transparent">
-                                <small class="text-muted">Начальный этап</small>
-                            </div>
+        <!-- Лучшие проекты -->
+        <section>
+            <h2 class="text-center text-primary mb-4">Лучшие проекты</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-laptop text-primary" style="font-size: 3rem;"></i>
+                            <h5 class="card-title mt-3 text-primary">Проект 1</h5>
+                            <p class="card-text">Веб-сайт портфолио</p>
+                            <button class="btn btn-outline-primary btn-sm">Подробнее</button>
                         </div>
                     </div>
-                    
-                    <!-- Опыт 2 -->
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-success practice-card">
-                            <div class="card-body">
-                                <h5 class="card-title text-success">
-                                    <i class="bi bi-book me-2"></i>Опыт 2
-                                </h5>
-                                <p class="card-text">Учился в школе. Освоил фундаментальные знания и начал интересоваться технологиями.</p>
-                            </div>
-                            <div class="card-footer bg-transparent">
-                                <small class="text-muted">Базовое образование</small>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-phone text-primary" style="font-size: 3rem;"></i>
+                            <h5 class="card-title mt-3 text-primary">Проект 2</h5>
+                            <p class="card-text">Мобильное приложение</p>
+                            <button class="btn btn-outline-primary btn-sm">Подробнее</button>
                         </div>
                     </div>
-                    
-                    <!-- Опыт 3 -->
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-warning practice-card">
-                            <div class="card-body">
-                                <h5 class="card-title text-warning">
-                                    <i class="bi bi-mortarboard me-2"></i>Опыт 3
-                                </h5>
-                                <p class="card-text">Учусь в университете. Углубляю знания в области программирования и веб-разработки.</p>
-                            </div>
-                            <div class="card-footer bg-transparent">
-                                <small class="text-muted">Высшее образование</small>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-shop text-primary" style="font-size: 3rem;"></i>
+                            <h5 class="card-title mt-3 text-primary">Проект 3</h5>
+                            <p class="card-text">Интернет-магазин</p>
+                            <button class="btn btn-outline-primary btn-sm">Подробнее</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- Футер -->
     <footer class="gradient-bg text-white py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 Портфолио. Все права защищены.</p>
+                    <p class="mb-0">&copy; 2025 Контакты</p>
                 </div>
             </div>
         </div>
