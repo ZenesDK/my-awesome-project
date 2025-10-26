@@ -24,7 +24,7 @@
     <!-- Навигация -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background: #6A0DAD;">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -51,7 +51,7 @@
         <!-- Приветствие -->
         <section class="row align-items-center mb-5">
             <div class="col-md-4 text-center mb-4 mb-md-0">
-                <img src="images/photo.png" alt="Фото студента" class="profile-img rounded">
+                <img src="images/photo.jpg" alt="Фото студента" class="profile-img rounded">
             </div>
             <div class="col-md-8">
                 <h2 class="text-primary mb-3">Привет! Я студент</h2>
@@ -63,7 +63,7 @@
                 <p class="mb-4">Увлекаюсь веб-разработкой, изучаю современные технологии и создаю интересные проекты.</p>
                 
                 <!-- Кнопка скачивания резюме -->
-                <a href="assets/resume.pdf" class="btn btn-gradient btn-lg" download="Резюме_Кайзер_Даниил.pdf">
+                <a href="files/resume.pdf" class="btn btn-gradient btn-lg" download="Резюме_Кайзер_Даниил.pdf">
                     <i class="bi bi-download me-2"></i>Скачать резюме
                 </a>
             </div>
@@ -72,47 +72,47 @@
         <!-- Навыки -->
         <section class="mb-5">
             <h2 class="text-center text-primary mb-4">Мои навыки</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
+            <div class="row g-3 g-md-4">
+                <div class="col-12 col-sm-6">
                     <div class="skill-item">
                         <div class="d-flex justify-content-between mb-2">
                             <span>HTML/CSS</span>
                             <span>90%</span>
                         </div>
-                        <div class="progress" style="height: 10px;">
+                        <div class="progress">
                             <div class="progress-bar" style="width: 90%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-sm-6">
                     <div class="skill-item">
                         <div class="d-flex justify-content-between mb-2">
                             <span>JavaScript</span>
                             <span>80%</span>
                         </div>
-                        <div class="progress" style="height: 10px;">
+                        <div class="progress">
                             <div class="progress-bar" style="width: 80%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-sm-6">
                     <div class="skill-item">
                         <div class="d-flex justify-content-between mb-2">
                             <span>Bootstrap</span>
                             <span>85%</span>
                         </div>
-                        <div class="progress" style="height: 10px;">
+                        <div class="progress">
                             <div class="progress-bar" style="width: 85%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-sm-6">
                     <div class="skill-item">
                         <div class="d-flex justify-content-between mb-2">
                             <span>React</span>
                             <span>60%</span>
                         </div>
-                        <div class="progress" style="height: 10px;">
+                        <div class="progress">
                             <div class="progress-bar" style="width: 60%; background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);"></div>
                         </div>
                     </div>
@@ -123,33 +123,33 @@
         <!-- Лучшие проекты -->
         <section>
             <h2 class="text-center text-primary mb-4">Лучшие проекты</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
+            <div class="row g-3 g-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-laptop text-primary" style="font-size: 3rem;"></i>
-                            <h5 class="card-title mt-3 text-primary">Проект 1</h5>
-                            <p class="card-text">Веб-сайт портфолио</p>
+                        <img src="images/project1.jpg" class="card-img-top" alt="Веб-сайт портфолио" style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center p-3 p-md-4">
+                            <h5 class="card-title text-primary">Портфолио сайт</h5>
+                            <p class="card-text">Личный сайт-портфолио с адаптивным дизайном</p>
                             <button class="btn btn-outline-primary btn-sm">Подробнее</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-phone text-primary" style="font-size: 3rem;"></i>
-                            <h5 class="card-title mt-3 text-primary">Проект 2</h5>
-                            <p class="card-text">Мобильное приложение</p>
+                        <img src="images/project2.jpg" class="card-img-top" alt="Todo приложение" style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center p-3 p-md-4">
+                            <h5 class="card-title text-primary">Todo приложение</h5>
+                            <p class="card-text">Приложение для управления задачами</p>
                             <button class="btn btn-outline-primary btn-sm">Подробнее</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-shop text-primary" style="font-size: 3rem;"></i>
-                            <h5 class="card-title mt-3 text-primary">Проект 3</h5>
-                            <p class="card-text">Интернет-магазин</p>
+                        <img src="images/project3.jpg" class="card-img-top" alt="Интернет-магазин" style="height: 200px; object-fit: cover;">
+                        <div class="card-body text-center p-3 p-md-4">
+                            <h5 class="card-title text-primary">Интернет-магазин</h5>
+                            <p class="card-text">Магазин с корзиной и оформлением заказов</p>
                             <button class="btn btn-outline-primary btn-sm">Подробнее</button>
                         </div>
                     </div>
