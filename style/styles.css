@@ -309,6 +309,109 @@ textarea.form-control {
     transform: scale(1.2);
 }
 
+/* ==== СТИЛИ ДЛЯ ДОСТУПНОСТИ ==== */
+
+/* Индикатор фокуса */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus {
+    outline: 3px solid #8A2BE2;
+    outline-offset: 2px;
+}
+
+/* Состояния для скринридеров */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Контраст для текста */
+.text-primary {
+    color: #6A0DAD !important;
+}
+
+.text-secondary {
+    color: #5a6268 !important; /* Улучшенный контраст */
+}
+
+/* Состояния форм */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Индикаторы обязательных полей */
+.text-danger {
+    color: #dc3545 !important;
+}
+
+/* Улучшение контраста для ссылок */
+a {
+    color: #6A0DAD;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #4a0a8a;
+}
+
+/* Доступные иконки */
+.bi[aria-hidden="true"] {
+    pointer-events: none;
+}
+
+/* Живые регионы */
+[aria-live] {
+    pointer-events: none;
+}
+
+/* Состояния навигации */
+.navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 2px solid white;
+}
+
+/* Улучшение видимости фокуса для кнопок */
+.btn:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.btn:focus-visible {
+    outline: 3px solid #8A2BE2;
+    outline-offset: 2px;
+}
+
+/* Адаптация для высококонтрастного режима */
+@media (prefers-contrast: high) {
+    .btn-gradient {
+        border: 2px solid white;
+    }
+    
+    .card {
+        border: 1px solid #6A0DAD;
+    }
+}
+
+/* Поддержка reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .scalable-element:hover {
+        transform: none !important;
+    }
+}
+
 /* ===== АДАПТИВНОСТЬ ===== */
 
 /* Большие планшеты и маленькие десктопы */
